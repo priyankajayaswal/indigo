@@ -2,7 +2,7 @@
 title: "OpenAPISpec + Productivity"
 layout: post
 date: 2020-11-09 23:02
-image: \assets\images\blog\2020-11-09-open-api-spec.markdown.PNG
+image: /assets/images/blog/2020-11-09-open-api-spec.markdown.PNG
 headerImage: false
 projects: true
 hidden: false # don't count this post in blog pagination
