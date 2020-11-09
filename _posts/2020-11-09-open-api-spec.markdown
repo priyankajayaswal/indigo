@@ -1,203 +1,76 @@
 ---
-title: "Markdown Common Elements"
+title: "OpenAPISpec + Productivity"
 layout: post
-date: 2016-02-24 22:44
-image: /assets/images/markdown.jpg
+date: 2020-11-09 23:02
+image: \assets\images\blog\2020-11-09-open-api-spec.markdown.PNG
 headerImage: false
+projects: true
+hidden: false # don't count this post in blog pagination
 tag:
-- markdown
-- elements
-star: true
+- CSharp
+- Swagger
+- OpenApiSpecs
+- DeveloperProductivity
 category: blog
-author: johndoe
-description: Markdown summary with different options
+author: priyankajayaswal
+description: Adding swagger creation anf UI support for .NET Code Service
 ---
 
-## Basic formatting
+# Introduction
 
-This note **demonstrates** some of what [Markdown][1] is *capable of doing*.
+This blog talks about how to use [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/) to enable using swagger.json creation and swagger UI creation in .NET Core 3.1 services.
+NOTE:
+ - OpenAPISpec/Swagger can be used interchangibly, though OpenAPISpec is preferred.
 
-And that's how to do it.
+## [OpenAPI Specification](https://swagger.io/)
 
-{% highlight html %}
-This note **demonstrates** some of what [Markdown][some/link] is *capable of doing*.
-{% endhighlight %}
+- In 2015, under the OpenAPI Initiative, OpenAPI Specification was donated to Linux Foundation
+- With this specification, a RESTful interface for the developed APIs is created which can be easily consumed. This is created by effectively mapping resources and operations.
 
----
+# Benefits of adding swagger/OpenApiSpecs
+- With several tools created to enable swagger creation at development time, this becomes a visual representation of the API development and progress.
+- One can have a look at the swagger/openAPISpecs file which is created and have a clear understanding on what's the API structure looks like. This is highly beneficial when collaborating with remote teams wtc., where a frequent review is needed.
+- Once the swagger files are created and are validated to be free from invalid syntaxes, this can be used in client generation and eventually create powerful SDKs on top of it across several languages (C#, Python, Java, TypeScript, Go, Ruby and even Powershell) using several tools like
+    - [Autorest](https://github.com/Azure/autorest/)
+    - [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator)
+    - etc.
 
-## Headings
+# Working demo:
 
-There are six levels of headings. They correspond with the six levels of HTML headings. You've probably noticed them already in the page. Each level down uses one more hash character. But we are using just 4 of them.
+- Repo that contains swagger file creation and UI enabled in a .NET Core 3.1 service - [Refer](https://github.com/priyankajayaswal1/SwaggerDummy)
+- Clone the repo.
+- Run `dotnet build SwaggerDummy.csproj`
 
-# Headings can be small
+# Steps:
+1. Install `Swashbuckle.AspNetCore` (use > 5.0.0 since it supports OpenApi)
+2. In `Startup.cs` enable swagger by adding following in `ConfigureServices`
+    ```
+        services.AddSwaggerGen(setupAction =>
+            {
+                setupAction.SwaggerDoc("<PathToHostSwagger>", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Your preferred title.",
+                    Version = "1.0",
+                });
+            });
 
-## Headings can be small
+    ```
+3. In `Startup.cs` also add following to `Configure` after `app.UseHttpsRedirection()`
+    ```
+        app.UseSwagger(c =>
+            {
+                c.SerializeAsV2 = true; // Can use when intention is to create OpenAPISpec 2.0
+            });
+    ```
+3. With above code, you are enabling swagger file creation for your service and to be hosted at '<your-service-url>/swagger/<PathToHostSwagger>/swagger.json`.
+4. The title and version is that for the swagger file that would be created.
+5. Enable Swagger UI by adding following in `Configure` function after the above added snippet.
+    ```
 
-### Headings can be small
-
-#### Headings can be small
-
-{% highlight raw %}
-# Heading
-## Heading
-### Heading
-#### Heading
-{% endhighlight %}
-
----
-
-## Lists
-
-### Ordered list
-
-1. Item 1
-2. A second item
-3. Number 3
-
-{% highlight raw %}
-1. Item 1
-2. A second item
-3. Number 3
-{% endhighlight %}
-
-### Unordered list
-
-* An item
-* Another item
-* Yet another item
-* And there's more...
-
-{% highlight raw %}
-* An item
-* Another item
-* Yet another item
-* And there's more...
-{% endhighlight %}
-
----
-
-## Paragraph modifiers
-
-### Quote
-
-> Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.
-
-{% highlight raw %}
-> Here is a quote. What this is should be self explanatory.
-{% endhighlight raw %}
-
----
-
-## URLs
-
-URLs can be made in a handful of ways:
-
-* A named link to [Mark It Down][3].
-* Another named link to [Mark It Down](https://google.com/)
-* Sometimes you just want a URL like <https://google.com/>.
-
-{% highlight raw %}
-* A named link to [MarkItDown][3].
-* Another named link to [MarkItDown](https://google.com/)
-* Sometimes you just want a URL like <https://google.com/>.
-{% endhighlight %}
-
----
-
-## Horizontal rule
-
-A horizontal rule is a line that goes across the middle of the page.
-It's sometimes handy for breaking things up.
-
-{% highlight raw %}
----
-{% endhighlight %}
-
----
-
-## Images
-
-Markdown can also contain images. I'll need to add something here sometime.
-
-{% highlight raw %}
-![Markdowm Image][/image/url]
-{% endhighlight %}
-
-![Markdowm Image][5]
-
-*Figure Caption*?
-
-{% highlight raw %}
-![Markdowm Image][/image/url]
-<figcaption class="caption">Photo by John Doe</figcaption>
-{% endhighlight %}
-
-![Markdowm Image][5]
-<figcaption class="caption">Photo by John Doe</figcaption>
-
-*Bigger Images*?
-
-{% highlight raw %}
-![Markdowm Image][/image/url]{: class="bigger-image" }
-{% endhighlight %}
-
-![Markdowm Image][5]{: class="bigger-image" }
-
----
-
-## Code
-
-A HTML Example:
-
-{% highlight html %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Just a test</h1>
-</body>
-</html>
-{% endhighlight %}
-
-A CSS Example:
-
-{% highlight css %}
-pre {
-    padding: 10px;
-    font-size: .8em;
-    white-space: pre;
-}
-
-pre, table {
-    width: 100%;
-}
-
-code, pre, tt {
-    font-family: Monaco, Consolas, Inconsolata, monospace, sans-serif;
-    background: rgba(0,0,0,.05);
-}
-{% endhighlight %}
-
-A JS Example:
-
-{% highlight js %}
-// Sticky Header
-$(window).scroll(function() {
-
-    if ($(window).scrollTop() > 900 && !$("body").hasClass('show-menu')) {
-        $('#hamburguer__open').fadeOut('fast');
-    } else if (!$("body").hasClass('show-menu')) {
-        $('#hamburguer__open').fadeIn('fast');
-    }
-
-});
-{% endhighlight %}
-
-[1]: https://daringfireball.net/projects/markdown/
-[2]: https://www.fileformat.info/info/unicode/char/2163/index.htm
-[3]: https://daringfireball.net/projects/markdown/basics
-[4]: https://daringfireball.net/projects/markdown/syntax
-[5]: https://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg
+            app.UseSwaggerUI(setupAction=>
+            {
+                setupAction.SwaggerEndpoint("/swagger/"<PathToHostSwagger>/swagger.json", "<DfinitionName>");
+            });
+    ```
+6. Note: the SwaggerEndpoint defined above is same where the swagger.json file got hosted on creation i.e., `/swagger/"<PathToHostSwagger>/swagger.json`
+7. The UI looks like ![UI](..\assets\images\blog\2020-11-09-blog.markdown.PNG)
