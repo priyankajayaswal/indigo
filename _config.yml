@@ -1,23 +1,23 @@
 # main text of home
-name: John Doe
-bio: A Man who travels the world eating noodles
+name: Priyanka Jayaswal
+bio: Tech Enthusiast
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: Tech Enthusiast
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/images/profile.png
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume-url: https://drive.google.com/file/d/10KC1smltCqwylTBVo8RsHf2GAeH3cmQT/view?usp=sharing
 
-url: https://sergiokopplin.github.io/indigo
-# your url: https://USERNAME.github.io
+url: https://priyankajayaswal.github.io
+# your url: http://USERNAME.github.io
 
 permalink: /:title/
 
@@ -29,42 +29,42 @@ permalink: /:title/
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: mydisqus # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+# disqus:
+#   shortname: mydisqus # enter this from your disqus account
+#   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+# facebook: myfacebook
+twitter: PriyankaJaya
+# google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-# linkedin: mylinkedin
+linkedin: priyanka-jayaswal-95059364
 # youtube: myyoutube
 # spotify: myspotify
-github: mygithub
-# gitlab: mygitlab
+github: priyankajayaswal1
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: medium
+# medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: myemail@gmail.com
+email: priyankajayaswal025@gmail.com
 
-authors:
-  johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
-    external-image: false
-    picture: assets/images/profile.jpg
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+# authors:
+#     johndoe:
+#         name: John Doe
+#         bio: A Man who travels the world eating noodles
+#         external-image: false
+#         picture: assets/images/profile.jpg
+#         twitter: johndoe
+#     jamesfoster:
+#         name: James Foster
+#         bio: A Man who develops software with coffee
+#         external-image: false
+#         picture: assets/images/james.jpg
+#         twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -80,7 +80,7 @@ pagination:
   permalink: "/:num/" # pagination link that will be appended
 
 # if you don't need projects, comment the *projects* configs below
-projects: true
+# projects: true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
@@ -103,16 +103,6 @@ show-author: true
 
 # do you want some animations?
 animation: true
-
-# add default values to specific pages or layouts
-defaults:
-  - scope:
-      path: "" # an empty string here means all files in the project
-      layout: "post"
-    values:
-      # setting all post to not hidden by default,
-      # can be overridden in the front matter for a specific post
-      hidden: false
 
 plugins:
   - jekyll-seo-tag

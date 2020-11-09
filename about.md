@@ -2,45 +2,37 @@
 title: About
 layout: page
 ---
-![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
+![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I am Priyanka Jayaswal, a 2017 Integrated M.Sc. graduate from Indian Institute of Technology, Kharagpur in Mathematics and Computing. I am curious about technology, data science, natural language processing and machine learning. I am presently working as a Software Development Engineer at Microsoft, Hyderabad .</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I have worked on diverse fields from frontend, backend, big data, natural language processing and machine learning. I am interested in open source contribution with my first contribution made to <a href="https://gerrit.wikimedia.org/r/#/q/owner:priyankajayaswal025%2540gmail.com"> Wikimedia Foundation</a> . I have also explored <a href="https://arxiv.org/pdf/1606.06424.pdf"> NLP</a> . I am curious about big data and have experience working with Apache Spark. Apart from this, I have domain knowledge in AngularJs, Ionic Framework, ReactJs and NodeJs. There is a lot out there to learn and a long way to reach proficiency at the things at hand. But I'm curious and would keep exploring.</p>
 
-<h2>Skills</h2>
+<p>Presently working with .NET technologies and Slack+MSTeams integrations for AzureDevops products.</p>
+
+<h3>Familiar With</h3>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
+	<li>Gulp</li>
+	<li>Git</li>
+	<li>HTML</li>
+	<li>CSS (Sass)</li>
 	<li>NodeJS</li>
 	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
 	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>Firebase</li>
+	<li>Nginx</li>
+	<li>Python - C - C++ - JS - Scala</li>
+	<li>Ionic Framework - Cordova - Android - iOS - PWA</li>
+	<li>Apache Spark - HDFS - Hadoop - AWS - Hive</li>
+	<li>Jenkins Continuous Integration</li>
+	<li>Google Analytics/ Google Tag Manager - Mixpanel</li>
 </ul>
 
-<h2>Projects</h2>
+<!-- <h2>Projects</h2>
 
 <ul>
 	<li><a href="https://github.com/">Lorem Lorem</a></li>
 	<li><a href="https://github.com/">Ipsum Dolor</a></li>
 	<li><a href="https://github.com/">Dolor Lorem</a></li>
-</ul>
+</ul> -->
