@@ -11,7 +11,7 @@ tag:
 - mock
 - python
 - unittests
-category: python
+category: blog
 author: priyankajayaswal
 description: Mocker patch for mocking in python
 ---

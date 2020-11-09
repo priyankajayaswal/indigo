@@ -11,7 +11,7 @@ tag:
 - Swagger
 - OpenApiSpecs
 - DeveloperProductivity
-category: dev_productivity
+category: blog
 author: priyankajayaswal
 description: Adding swagger creation anf UI support for .NET Code Service
 ---

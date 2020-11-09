@@ -10,7 +10,7 @@ tag:
 - language
 - UML
 - productivity
-category: dev_productivity
+category: blog
 author: priyankajayaswal
 description: Dev secret code lang to simplify computer design concepts.
 ---
