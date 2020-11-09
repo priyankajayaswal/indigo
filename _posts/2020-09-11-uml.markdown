@@ -2,7 +2,6 @@
 title: "SDE's visual companion to demystify system design"
 layout: post
 date: 2020-09-11 23:02
-image: /assets/images/markdown.jpg
 headerImage: true
 projects: true
 hidden: false # don't count this post in blog pagination
